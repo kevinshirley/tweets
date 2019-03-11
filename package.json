@@ -1,0 +1,26 @@
+{
+  "name": "tweets",
+  "version": "1.0.0",
+  "description": "Latest tweets from Donald Trump and Hilary Clinton",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinshirley/tweets.git"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "Kevin Shirley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevinshirley/tweets/issues"
+  },
+  "homepage": "https://github.com/kevinshirley/tweets#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}
