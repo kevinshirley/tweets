@@ -1,8 +1,230 @@
+/* $variables */
+$mainblue: rgb(42, 128, 241);
+
+/* common */
 body {
   padding: 0;
   margin: 0;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Bootstrap Reset */
+.container {
+  background: #f4f4f4;
+  width: 100%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+@media screen and (max-width: 1700px) {
+	.container {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .App {
-  
+  background: #fff;
+  width: 100%;
+  .menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: $mainblue;
+    .wrapper {
+      width: 95%;
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      .logo {
+        display: flex;
+        align-items: center;
+        a {
+          color: #fff;
+          svg {
+            font-size: 2.2em;
+          }
+        }
+      }
+      .search {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        cursor: pointer;
+        svg {
+          font-size: 2.2em;
+        }
+      }
+    }
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tweetList {
+    width: 90%;
+    margin-top: 20px;
+    margin-top: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #d8d8d8;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      padding-inline-start: 0;
+      li {
+        display: flex;
+        flex-direction: column;
+        a {
+          color: #181818;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          .badge {
+            img {
+              width: 15px;
+              height: 15px;
+            }
+          }
+        }
+        .username {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .tweet-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .tweet-container-title {
+      padding: 12px 0;
+    }
+    .tweet-content {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      background: #f0efef;
+      .tweets-sidemenu {
+        width: 35%;
+        margin: 15px 0;
+        .input-field {
+          .profileCard {
+            background: #fff;
+            border-radius: 4px;
+            padding: 12px 8px;
+            display: flex;
+            margin-left: 3%;
+            justify-content: space-around;
+            align-items: center;
+            .picture {
+              border-radius: 100%;
+              background: $mainblue;
+              border: 3px solid #f4f4f4;
+              color: #fff;
+              padding: 10px;
+              display: flex;
+              justify-content: center;
+              cursor: pointer;
+            }
+          }
+          .feedButton {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            a {
+              background: #fff;
+              padding: 8px 18px;
+              border-radius: 4px;
+              font-weight: bold;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .tweet-items {
+        width: 65%;
+        background: #fff;
+        margin: 15px 10px;
+        padding: 12px 12px;
+        border-radius: 4px;
+        .items-container {
+          .items {
+            .item {
+              padding: 7px 10px;
+              margin-bottom: 20px;
+              border: 1px solid #f4f4f4;
+              border-radius: 4px;
+              .user-info {
+                display: flex;
+                justify-content: space-between;
+                .picture {
+                  img {
+                    border-radius: 100%;
+                    display: flex;
+                    justify-content: center;
+                  }
+                }
+                .user-name {
+                  a {
+                    display: flex;
+                    justify-content: space-around;
+                    text-decoration: none;
+                    .name {
+                      color: #101010;
+                      font-weight: bold;
+                      font-size: 15px;
+                      text-align: center;
+                    }
+                    .nickname {
+                      color: #acacac;
+                      margin-left: 2%;
+                      font-size: 13px;
+                    }
+                  }
+                }
+                .time {
+                  font-size: 12px;
+                }
+              }
+              .text {
+                padding-top: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+	.App {
+    
+    .tweetList {
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        li {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
 }
