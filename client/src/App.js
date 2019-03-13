@@ -27,9 +27,4 @@ class App extends Component {
   }
 }
 
-// const mapStateToProps = (state) => ({
-//   tweets: state.tweets,
-// });
-
-// export default connect(mapStateToProps, {})(App);
 export default App;

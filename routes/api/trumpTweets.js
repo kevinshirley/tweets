@@ -9,19 +9,16 @@ const Twitter = require('twitter');
 
 module.exports = (app, socket) => {
   let twitter = new Twitter({
-    consumer_key: 'vZKJfAwwX9aOWfFqtEnPd3x9E',
-    consumer_secret: '9oKWUBO2qiZSVj4lDUn0oUNphZiEtmKfX3rq6ZWxEtWUa9nyz0',
-    access_token_key: '985343007812653056-t8PL5gg4W64QnucJ9057UX40QOAUZOw',
-    access_token_secret: 'FRc4S9B2lwdfEuzmzXL6ByiavlalSRnTRSOVH6IfpazW7'
+    consumer_key: process.env.TWITTER_CONSUMER_KEY,
+    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
   });
 
   let socketConnection;
   let twitterStream;
 
-  // app.locals.searchTerm = 'Javascript'; //default search term for twitter stream
   app.locals.trump = 25073877; // trump
-  // app.locals.searchTerm = 1339835893; // hillary
-  // app.locals.searchTerm = [1339835893, 25073877]; // both
   app.locals.showRetweets = false; // default
 
   /**
